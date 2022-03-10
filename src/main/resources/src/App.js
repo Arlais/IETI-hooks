@@ -5,9 +5,16 @@ import Profile from "./components/profile";
 
 function App() {
   return (
-    <div className="App">
-        <Login/>
-    </div>
+      <BrowserRouter>
+          <div className="App">
+              <Routes>
+                  <Route path="/login" component={<Login/>}> Hola</Route>
+                  <Route path="/profile" component={<Profile/>}> chao</Route>
+              </Routes>
+              <Login/>
+          </div>
+      </BrowserRouter>
+
   );
 }
 
